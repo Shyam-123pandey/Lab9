@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="quiz.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <section class="login-section" id="loginSection">
+        <div class="login-container">
+            <h2>Login to Start Quiz</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <small id="emailError" class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                    <small id="passwordError" class="error-msg"></small>
+                </div>
+                <button type="submit" id="loginBtn">Start Quiz</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="main" id="quizSection" style="display: none;">
+        <div class="container">
+            <div class="col">
+                <h3 id="questionBox"></h3>
+            </div>
+            <div class="col box">
+                <input class="option" type="radio" name="option" id="first" value="a" required>
+                <label for="first"></label>
+            </div>
+            <div class="col box">
+                <input class="option" type="radio" name="option" id="second" value="b" required>
+                <label for="second"></label>
+            </div>
+            <div class="col box">
+                <input class="option" type="radio" name="option" id="third" value="c" required>
+                <label for="third"></label>
+            </div>
+            <div class="col box">
+                <input class="option" type="radio" name="option" id="fourth" value="d" required>
+                <label for="fourth"></label>
+            </div>
+            <button id="submit" onclick="submitQuiz();">Submit</button>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+   
+</body> 
+</html>

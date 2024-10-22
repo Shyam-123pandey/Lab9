@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <input id="res" type="text " readonly>
+
+      <button class="box"
+      onclick="
+      current = ''
+      document.querySelector('#res').value = current;"
+      >C</button>
+      
+      <button class="box" onclick="
+      current = current+'0'
+      document.querySelector('#res').value = current;
+      " >0</button>
+
+      <button class="box" onclick="
+      current = current+'1'
+      document.querySelector('#res').value = current;
+      " >1</button>
+      <button class="box"
+      onclick="
+      current = current+'2'
+      document.querySelector('#res').value = current;"
+      >2</button>
+
+      <button class="box"
+      onclick="
+      current = current+'3'
+      document.querySelector('#res').value = current"
+      >3</button>
+      <button class="box"
+      onclick="
+      current = current+'4'
+      document.querySelector('#res').value = current">4</button>
+      <button class="box"
+      onclick="
+      current = current+'5'
+      document.querySelector('#res').value = current">5</button>
+      <button class="box"
+      onclick="
+      current = current+'6'
+      document.querySelector('#res').value = current">6</button>
+      <button class="box"
+      onclick="
+      current = current+'7'
+      document.querySelector('#res').value = current"
+      >7</button>
+      <button class="box"
+      onclick="
+      current = current+'8'
+      document.querySelector('#res').value = current"
+      >8</button>
+      <button class="box"
+      onclick="
+      current = current+'9'
+      document.querySelector('#res').value = current">9</button>
+      <button class="box"
+      onclick="
+      current = current+'+'
+      document.querySelector('#res').value = current"
+      >+</button>
+      <button class="box"
+      onclick="
+      current = current+'-'
+      document.querySelector('#res').value = current"
+      >-</button>
+      <button class="box"
+      onclick="
+      current = current+'/'
+      document.querySelector('#res').value = current"
+      >/</button>
+      <button class="box"
+      onclick="
+      current = current+'*'
+      document.querySelector('#res').value = current"
+      >*</button>
+      <button class="box"
+      onclick="
+      current = current+'%'
+      document.querySelector('#res').value = current"
+      >%</button>
+
+      <button class="box"
+      onclick="
+      current = current+'^'
+      document.querySelector('#res').value = current"
+      >^</button>
+
+      <button class="box" onclick="
+        current = current+'(';
+        document.querySelector('#res').value = current;
+      ">(</button>
+
+<!-- Button for closing parenthesis -->
+        <button class="box" onclick="
+          current = current+')';
+          document.querySelector('#res').value = current;
+        ">)</button>
+
+      <button class="box" onclick="
+      current = current.slice(0, -1);  // Remove the last character
+      document.querySelector('#res').value = current;
+      ">←</button>
+
+      <button class="box" onclick="
+        try {
+          document.querySelector('#res').value = eval(current);
+        } catch (e) {
+          document.querySelector('#res').value = 'Please Enter Valid Cal.';
+        }
+      ">=</button>
+
+
+    </div>
+  </div>
+
+
+  <script >
+    let current = '';
+  
+     document.addEventListener('keydown',function(e){
+      if(e.key === 'Backspace'){
+       e.preventDefault();
+
+        current = current.slice(0,-1);
+        document.querySelector('#res').value = current;
+      }
+     })
+
+    document.querySelector('#res').value = current;
+  </script>
+</body>
+</html>
+
+
+
+

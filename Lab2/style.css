@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: purple;
+}
+
+.container{
+  background-color: #A6CFD5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid greenyellow;
+  border-radius: 10px;
+  
+  max-width: 80%;
+  margin: auto;
+  margin-top: 30px;
+
+}
+
+.content{
+  margin: 25px 25px;
+  padding: 5px 5px;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 20px auto;
+  padding: 5px;
+  border: 2px solid #E56399;
+  border-radius: 10px;
+}
+
+h1{
+  text-align: center;
+  color: white;
+}
+
+a{
+  color: white;
+}
